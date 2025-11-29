@@ -1,11 +1,11 @@
 CAPI=2:
-name: "team36:ece337:controller:1.0.0"
+name: "team36:ece337:cdl_controller:1.0.0"
 description: ""
 
 filesets:
     rtl:
         files:
-            - "source/controller.sv"
+            - "source/cdl_controller.sv"
         file_type: systemVerilogSource
         # depend:
         #     - "fusesoc:core:name"
@@ -13,13 +13,13 @@ filesets:
     synth:
         depend:
             - "ece337:tech:AMI_05_LIB"
-            - "team36:ece337:controller_syn"
+            - "team36:ece337:cdl_controller_syn"
 
     tb:
         files:
-            - "testbench/tb_controller.sv"
-            - "waves/controller.do": { file_type: user }
-            - "waves/controller.gtkw": { file_type: user }
+            - "testbench/tb_cdl_controller.sv"
+            - "waves/cdl_controller.do": { file_type: user }
+            - "waves/cdl_controller.gtkw": { file_type: user }
             # - "data/file.txt": { file_type: user }
         file_type: systemVerilogSource
 
@@ -31,21 +31,21 @@ targets:
     default: &default
         filesets:
             - rtl
-        toplevel: controller
+        toplevel: cdl_controller
 
     sim: &sim
         <<: *default
         default_tool: verilator
         filesets_append:
             - tb
-        toplevel: tb_controller
+        toplevel: tb_cdl_controller
         tools:
             modelsim:
                 vsim_options:
                     - -vopt
                     - -voptargs='+acc'
                     - -t ps
-                    - -do waves/controller.do
+                    - -do waves/cdl_controller.do
                     - -onfinish stop
                     - -do "set PrefSource(OpenOnFinish) 0 ; set PrefMain(LinePrefix) \"\" ; set PrefMain(colorizeTranscript) 1"
                     - -coverage
@@ -78,7 +78,7 @@ targets:
         filesets_append:
             - synfiles
         default_tool: design_compiler
-        toplevel: controller
+        toplevel: cdl_controller
         tools:
             design_compiler:
                 script_dir: "src/team36_ece337_synfiles_0"
