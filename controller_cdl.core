@@ -1,11 +1,11 @@
 CAPI=2:
-name: "team36:ece337:cdl_ahb_subordinate:1.0.0"
+name: "team36:ece337:controller_cdl:1.0.0"
 description: ""
 
 filesets:
     rtl:
         files:
-            - "source/cdl_ahb_subordinate.sv"
+            - "source/controller_cdl.sv"
         file_type: systemVerilogSource
         # depend:
         #     - "fusesoc:core:name"
@@ -13,13 +13,13 @@ filesets:
     synth:
         depend:
             - "ece337:tech:AMI_05_LIB"
-            - "team36:ece337:cdl_ahb_subordinate_syn"
+            - "team36:ece337:controller_cdl_syn"
 
     tb:
         files:
-            - "testbench/tb_cdl_ahb_subordinate.sv"
-            - "waves/cdl_ahb_subordinate.do": { file_type: user }
-            - "waves/cdl_ahb_subordinate.gtkw": { file_type: user }
+            - "testbench/tb_controller_cdl.sv"
+            - "waves/controller_cdl.do": { file_type: user }
+            - "waves/controller_cdl.gtkw": { file_type: user }
             # - "data/file.txt": { file_type: user }
         file_type: systemVerilogSource
 
@@ -31,21 +31,21 @@ targets:
     default: &default
         filesets:
             - rtl
-        toplevel: cdl_ahb_subordinate
+        toplevel: controller_cdl
 
     sim: &sim
         <<: *default
         default_tool: verilator
         filesets_append:
             - tb
-        toplevel: tb_cdl_ahb_subordinate
+        toplevel: tb_controller_cdl
         tools:
             modelsim:
                 vsim_options:
                     - -vopt
                     - -voptargs='+acc'
                     - -t ps
-                    - -do waves/cdl_ahb_subordinate.do
+                    - -do waves/controller_cdl.do
                     - -onfinish stop
                     - -do "set PrefSource(OpenOnFinish) 0 ; set PrefMain(LinePrefix) \"\" ; set PrefMain(colorizeTranscript) 1"
                     - -coverage
@@ -78,7 +78,7 @@ targets:
         filesets_append:
             - synfiles
         default_tool: design_compiler
-        toplevel: cdl_ahb_subordinate
+        toplevel: controller_cdl
         tools:
             design_compiler:
                 script_dir: "src/team36_ece337_synfiles_0"
