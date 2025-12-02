@@ -18,6 +18,7 @@ add wave -noupdate -divider outputs
 add wave -noupdate /tb_controller_cdl/weight_num
 add wave -noupdate /tb_controller_cdl/in_num
 add wave -noupdate -color Blue /tb_controller_cdl/data_ready
+add wave -noupdate /tb_controller_cdl/weights_loaded
 add wave -noupdate -color Gray90 /tb_controller_cdl/buffer_busy
 add wave -noupdate -color Gold /tb_controller_cdl/design_busy
 add wave -noupdate -color Cyan /tb_controller_cdl/write_w_enable
@@ -32,7 +33,7 @@ add wave -noupdate /tb_controller_cdl/systolic_out
 add wave -noupdate /tb_controller_cdl/weight
 add wave -noupdate /tb_controller_cdl/in
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {672043 ps} 0}
+WaveRestoreCursors {{Cursor 1} {694463 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -48,4 +49,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {955500 ps}
+WaveRestoreZoom {0 ps} {745500 ps}
