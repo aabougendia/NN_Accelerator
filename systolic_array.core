@@ -7,8 +7,8 @@ filesets:
         files:
             - "source/systolic_array.sv"
         file_type: systemVerilogSource
-        # depend:
-        #     - "fusesoc:core:name"
+        depend:
+            - "team36:ece337:systolic_pe:1.0.0"
 
     synth:
         depend:
@@ -20,7 +20,6 @@ filesets:
             - "testbench/tb_systolic_array.sv"
             - "waves/systolic_array.do": { file_type: user }
             - "waves/systolic_array.gtkw": { file_type: user }
-            # - "data/file.txt": { file_type: user }
         file_type: systemVerilogSource
 
     synfiles:
