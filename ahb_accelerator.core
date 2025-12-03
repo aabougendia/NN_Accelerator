@@ -7,8 +7,13 @@ filesets:
         files:
             - "source/ahb_accelerator.sv"
         file_type: systemVerilogSource
-        # depend:
-        #     - "fusesoc:core:name"
+        depend:
+            - "team36:ece337:ahb_subordinate_cdl:1.0.0"
+            - "team36:ece337:controller_cdl:1.0.0"
+            - "team36:ece337:bias_adder:1.0.0"
+            - "team36:ece337:data_buffer:1.0.0"
+            - "team36:ece337:systolic_array:1.0.0"
+            - "team36:ece337:activation:1.0.0"
 
     synth:
         depend:
