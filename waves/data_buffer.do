@@ -12,8 +12,8 @@ add wave -noupdate -color Gold /tb_data_buffer/weight_num
 add wave -noupdate /tb_data_buffer/in_num
 add wave -noupdate -color Cyan /tb_data_buffer/data
 add wave -noupdate /tb_data_buffer/hsize
-add wave -noupdate /tb_data_buffer/out2bias
 add wave -noupdate /tb_data_buffer/out_actv
+add wave -noupdate /tb_data_buffer/store_output
 add wave -noupdate -divider outputs
 add wave -noupdate -color {Dark Orchid} /tb_data_buffer/sram_data
 add wave -noupdate -color Goldenrod /tb_data_buffer/sram_state
@@ -58,7 +58,7 @@ add wave -noupdate {/tb_data_buffer/DUT/ram_out1/memory[0]}
 add wave -noupdate -divider mem_out2
 add wave -noupdate {/tb_data_buffer/DUT/ram_out2/memory[0]}
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1847837 ps} 0}
+WaveRestoreCursors {{Cursor 1} {2339522 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -74,4 +74,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {2215500 ps}
+WaveRestoreZoom {205275 ps} {2420775 ps}
