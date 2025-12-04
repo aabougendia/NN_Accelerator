@@ -27,38 +27,38 @@ add wave -noupdate -color Violet {/tb_data_buffer/DUT/ram_w1/memory[2]}
 add wave -noupdate -color {Medium Spring Green} {/tb_data_buffer/DUT/ram_w1/memory[1]}
 add wave -noupdate -color {Sky Blue} {/tb_data_buffer/DUT/ram_w1/memory[0]}
 add wave -noupdate -divider {mem_w2[0]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_w2/memory[7]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_w2/memory[6]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_w2/memory[5]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_w2/memory[4]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_w2/memory[3]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_w2/memory[2]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_w2/memory[1]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_w2/memory[0]}
+add wave -noupdate -color Cyan {/tb_data_buffer/DUT/ram_w2/memory[7]}
+add wave -noupdate -color {Yellow Green} {/tb_data_buffer/DUT/ram_w2/memory[6]}
+add wave -noupdate -color Coral {/tb_data_buffer/DUT/ram_w2/memory[5]}
+add wave -noupdate -color Gray50 {/tb_data_buffer/DUT/ram_w2/memory[4]}
+add wave -noupdate -color Yellow {/tb_data_buffer/DUT/ram_w2/memory[3]}
+add wave -noupdate -color {Spring Green} {/tb_data_buffer/DUT/ram_w2/memory[2]}
+add wave -noupdate -color {Steel Blue} {/tb_data_buffer/DUT/ram_w2/memory[1]}
+add wave -noupdate -color {Dark Orchid} {/tb_data_buffer/DUT/ram_w2/memory[0]}
 add wave -noupdate -divider {mem_in1[0]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in1/memory[7]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in1/memory[6]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in1/memory[5]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in1/memory[4]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in1/memory[3]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in1/memory[2]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in1/memory[1]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in1/memory[0]}
+add wave -noupdate -color Salmon {/tb_data_buffer/DUT/ram_in1/memory[7]}
+add wave -noupdate -color Turquoise {/tb_data_buffer/DUT/ram_in1/memory[6]}
+add wave -noupdate -color Plum {/tb_data_buffer/DUT/ram_in1/memory[5]}
+add wave -noupdate -color {Medium Spring Green} {/tb_data_buffer/DUT/ram_in1/memory[4]}
+add wave -noupdate -color Gold {/tb_data_buffer/DUT/ram_in1/memory[3]}
+add wave -noupdate -color Brown {/tb_data_buffer/DUT/ram_in1/memory[2]}
+add wave -noupdate -color Cyan {/tb_data_buffer/DUT/ram_in1/memory[1]}
+add wave -noupdate -color Orange {/tb_data_buffer/DUT/ram_in1/memory[0]}
 add wave -noupdate -divider {mem_in2[0]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in2/memory[7]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in2/memory[6]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in2/memory[5]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in2/memory[4]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in2/memory[3]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in2/memory[2]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in2/memory[1]}
-add wave -noupdate {/tb_data_buffer/DUT/ram_in2/memory[0]}
+add wave -noupdate -color Salmon {/tb_data_buffer/DUT/ram_in2/memory[7]}
+add wave -noupdate -color {Spring Green} {/tb_data_buffer/DUT/ram_in2/memory[6]}
+add wave -noupdate -color {Medium Slate Blue} {/tb_data_buffer/DUT/ram_in2/memory[5]}
+add wave -noupdate -color Coral {/tb_data_buffer/DUT/ram_in2/memory[4]}
+add wave -noupdate -color Aquamarine {/tb_data_buffer/DUT/ram_in2/memory[3]}
+add wave -noupdate -color {Blue Violet} {/tb_data_buffer/DUT/ram_in2/memory[2]}
+add wave -noupdate -color Yellow {/tb_data_buffer/DUT/ram_in2/memory[1]}
+add wave -noupdate -color Cyan {/tb_data_buffer/DUT/ram_in2/memory[0]}
 add wave -noupdate -divider mem_out1
-add wave -noupdate {/tb_data_buffer/DUT/ram_out1/memory[0]}
+add wave -noupdate -color {Lime Green} {/tb_data_buffer/DUT/ram_out1/memory[0]}
 add wave -noupdate -divider mem_out2
-add wave -noupdate {/tb_data_buffer/DUT/ram_out2/memory[0]}
+add wave -noupdate -color Cyan {/tb_data_buffer/DUT/ram_out2/memory[0]}
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2339522 ps} 0}
+WaveRestoreCursors {{Cursor 1} {512515 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -74,4 +74,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {205275 ps} {2420775 ps}
+WaveRestoreZoom {0 ps} {2320500 ps}
