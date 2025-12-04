@@ -5,6 +5,7 @@ add wave -noupdate /tb_controller_cdl/n_rst
 add wave -noupdate /tb_controller_cdl/CLK_PERIOD
 add wave -noupdate -divider state
 add wave -noupdate -color Cyan /tb_controller_cdl/DUT/current_state
+add wave -noupdate -color Gold /tb_controller_cdl/info
 add wave -noupdate -divider inputs
 add wave -noupdate -color Gold /tb_controller_cdl/store_weights
 add wave -noupdate -color Magenta /tb_controller_cdl/store_inputs
@@ -34,7 +35,8 @@ add wave -noupdate /tb_controller_cdl/systolic_out
 add wave -noupdate /tb_controller_cdl/weight
 add wave -noupdate /tb_controller_cdl/in
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {691407 ps} 0}
+quietly WaveActivateNextPane
+WaveRestoreCursors {{Cursor 1} {21873 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -50,4 +52,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {491200 ps} {680707 ps}
+WaveRestoreZoom {0 ps} {745500 ps}
