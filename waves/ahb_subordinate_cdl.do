@@ -28,6 +28,8 @@ add wave -noupdate -expand -group {Design side} /tb_ahb_subordinate_cdl/weights
 add wave -noupdate -expand -group {Design side} /tb_ahb_subordinate_cdl/inputs
 add wave -noupdate -expand -group {Design side} /tb_ahb_subordinate_cdl/bias
 add wave -noupdate -expand -group {Design side} /tb_ahb_subordinate_cdl/actv_mode
+add wave -noupdate /tb_ahb_subordinate_cdl/store_weights
+add wave -noupdate /tb_ahb_subordinate_cdl/store_inputs
 add wave -noupdate -color Violet /tb_ahb_subordinate_cdl/status
 add wave -noupdate -expand -group {Register Bank} -color Cyan /tb_ahb_subordinate_cdl/DUT/weight_reg
 add wave -noupdate -expand -group {Register Bank} -color Cyan /tb_ahb_subordinate_cdl/DUT/input_reg
@@ -38,7 +40,7 @@ add wave -noupdate -expand -group {Register Bank} /tb_ahb_subordinate_cdl/DUT/co
 add wave -noupdate -expand -group {Register Bank} /tb_ahb_subordinate_cdl/DUT/status_reg
 add wave -noupdate -expand -group {Register Bank} /tb_ahb_subordinate_cdl/DUT/activation_reg
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {27371 ps} 0}
+WaveRestoreCursors {{Cursor 1} {72513 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -54,4 +56,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {252 ns}
+WaveRestoreZoom {0 ps} {924 ns}
