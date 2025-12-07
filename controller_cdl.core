@@ -7,7 +7,8 @@ filesets:
         files:
             - "source/controller_cdl.sv"
         file_type: systemVerilogSource
-        # depend:
+        depend:
+            - "team36:ece337:flex_counter_cdl:1.0.0"
         #     - "fusesoc:core:name"
 
     synth:
