@@ -33,6 +33,7 @@ add wave -noupdate -expand -group {Design side} -color {Medium Aquamarine} /tb_a
 add wave -noupdate -expand -group {Design side} /tb_ahb_subordinate_cdl/actv_mode
 add wave -noupdate -color Gray80 /tb_ahb_subordinate_cdl/store_weights
 add wave -noupdate -color Gray80 /tb_ahb_subordinate_cdl/store_inputs
+add wave -noupdate -color Cyan /tb_ahb_subordinate_cdl/data_read
 add wave -noupdate -color Violet /tb_ahb_subordinate_cdl/status
 add wave -noupdate -expand -group {Register Bank} -color Cyan /tb_ahb_subordinate_cdl/DUT/weight_reg
 add wave -noupdate -expand -group {Register Bank} -color Cyan /tb_ahb_subordinate_cdl/DUT/input_reg

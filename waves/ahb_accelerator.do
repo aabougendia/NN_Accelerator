@@ -3,7 +3,8 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate -divider top_level_signal
 add wave -noupdate /tb_ahb_accelerator/DUT/clk
 add wave -noupdate /tb_ahb_accelerator/DUT/n_rst
-add wave -noupdate /tb_ahb_accelerator/DUT/haddr
+add wave -noupdate /tb_ahb_accelerator/haddr
+add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/haddr
 add wave -noupdate /tb_ahb_accelerator/DUT/hburst
 add wave -noupdate -color Cyan /tb_ahb_accelerator/DUT/hrdata
 add wave -noupdate /tb_ahb_accelerator/DUT/hready
@@ -13,13 +14,20 @@ add wave -noupdate /tb_ahb_accelerator/DUT/hsize
 add wave -noupdate /tb_ahb_accelerator/DUT/htrans
 add wave -noupdate -color Orange /tb_ahb_accelerator/DUT/hwdata
 add wave -noupdate /tb_ahb_accelerator/DUT/hwrite
+add wave -noupdate -divider {ahb regs}
+add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/weight_reg
+add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/input_reg
+add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/bias_reg
+add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/output_reg
+add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/activation_reg
+add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/control_reg
+add wave -noupdate -color Salmon /tb_ahb_accelerator/DUT/ahb_sub_cdl/status_reg
 add wave -noupdate -divider ahb_signals
 add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/actv_mode
 add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/bias
 add wave -noupdate -color Cyan /tb_ahb_accelerator/DUT/ahb_sub_cdl/buffer_busy
 add wave -noupdate -color Orange /tb_ahb_accelerator/DUT/ahb_sub_cdl/design_busy
 add wave -noupdate -color {Medium Orchid} /tb_ahb_accelerator/DUT/ahb_sub_cdl/data_ready
-add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/haddr
 add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/hburst
 add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/hrdata
 add wave -noupdate /tb_ahb_accelerator/DUT/ahb_sub_cdl/hready
@@ -116,7 +124,7 @@ add wave -noupdate /tb_ahb_accelerator/DUT/actv/activation_mode
 add wave -noupdate /tb_ahb_accelerator/DUT/actv/in
 add wave -noupdate -color Cyan /tb_ahb_accelerator/DUT/actv/out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2155839 ps} 0}
+WaveRestoreCursors {{Cursor 1} {635000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 275
@@ -132,4 +140,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {44068500 ps}
+WaveRestoreZoom {0 ps} {2677500 ps}
